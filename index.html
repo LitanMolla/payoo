@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./payoo.png" type="image/x-icon">
+    <title>Payooo - Mobile Bank</title>
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Tailwindcss and daisyui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="font-[Outfit] h-screen bg-[#F4F5F7] flex justify-center items-center text-[#080808]">
+    <div class="max-w-md w-full bg-white p-8 rounded-3xl">
+        <div class="bg-[url('./assets/bg.png')] bg-cover">
+            <img class="block mx-auto py-12" src="./assets/group.png" alt="">
+        </div>
+        <form class="space-y-6">
+            <div class="">
+                <label class="font-medium">Mobile Number</label>
+                <input id="number-input"
+                    class="bg-[#F4F5F7] block w-full mt-2 px-5 py-4 outline-0 rounded-3xl border-none" type="text"
+                    placeholder="Enter your number" value="12345678910">
+            </div>
+            <div class="">
+                <label class="font-medium">4 Digit Pin</label>
+                <input id="pin-input" class="bg-[#F4F5F7] block w-full mt-2 px-5 py-4 outline-0 rounded-3xl border-none"
+                    type="text" placeholder="Enter 4 Digit Pin" value="1234">
+            </div>
+            <button id="login-btn"
+                class="bg-[#0874F2] block w-full px-5 py-[14px] rounded-3xl cursor-pointer text-xl font-semibold text-white duration-300 hover:scale-105">Login</button>
+        </form>
+    </div>
+    <!-- JS Connenct -->
+     <script src="./app.js"></script>
+</body>
+
+</html>

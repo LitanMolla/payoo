@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./payoo.png" type="image/x-icon">
+    <title>Payooo - Mobile Bank</title>
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!-- font aswome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <!-- Tailwindcss and daisyui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="font-[Outfit] min-h-screen bg-[#F4F5F7] text-[#080808]">
+    <div class="max-w-md w-full mx-auto">
+        <div class="flex justify-between items-center p-6 bg-white border-b border-b-gray-300">
+            <div class="flex items-center gap-2">
+                <img class="h-12" src="./assets/group.png" alt="group">
+                <div class="">
+                    <h2 class="text-lg font-bold">$ <span id="total-blance">45000</span></h2>
+                    <p class="text-sm text-[#08080880]">Available Balance</p>
+                </div>
+            </div>
+            <button id="logout"
+                class="text-sm text-[#08080880] rounded-lg px-3 py-2 border border-[#08080880] cursor-pointer"><i
+                    class="fa-solid fa-arrow-right-from-bracket rotate-180 mr-2"></i><span>Log Out</span></button>
+        </div>
+        <div class="p-6 bg-white rounded-b-3xl">
+            <h3 class="text-2xl font-bold">🔥 Welcome to Payooo!</h3>
+            <p class="text-[#08080880] mt-3 mb-6">Enjoy easy and convenient financial services with us. Cashout charge
+                is low and </p>
+            <div class="grid grid-cols-3 gap-4">
+                <div id=""
+                    class="py-5 px-2.5 text-center rounded-xl border border-[#0808081A] cursor-pointer duration-300 hover:scale-105">
+                    <img class="block mx-auto w-6" src="./assets/money1.png" alt="Logo">
+                    <p class="text-sm text-[#080808B2] mt-2">Add Money</p>
+                </div>
+                <div id=""
+                    class="py-5 px-2.5 text-center rounded-xl border border-[#0808081A] cursor-pointer duration-300 hover:scale-105">
+                    <img class="block mx-auto w-6" src="./assets/money1.png" alt="Logo">
+                    <p class="text-sm text-[#080808B2] mt-2">Cashout</p>
+                </div>
+                <div id=""
+                    class="py-5 px-2.5 text-center rounded-xl border border-[#0808081A] cursor-pointer duration-300 hover:scale-105">
+                    <img class="block mx-auto w-6" src="./assets/money1.png" alt="Logo">
+                    <p class="text-sm text-[#080808B2] mt-2">Transfer Money</p>
+                </div>
+                <div id=""
+                    class="py-5 px-2.5 text-center rounded-xl border border-[#0808081A] cursor-pointer duration-300 hover:scale-105">
+                    <img class="block mx-auto w-6" src="./assets/money1.png" alt="Logo">
+                    <p class="text-sm text-[#080808B2] mt-2">Get Bonus</p>
+                </div>
+                <div id=""
+                    class="py-5 px-2.5 text-center rounded-xl border border-[#0808081A] cursor-pointer duration-300 hover:scale-105">
+                    <img class="block mx-auto w-6" src="./assets/money1.png" alt="Logo">
+                    <p class="text-sm text-[#080808B2] mt-2">Pay Bill</p>
+                </div>
+                <div id=""
+                    class="py-5 px-2.5 text-center rounded-xl border border-[#0808081A] cursor-pointer duration-300 hover:scale-105">
+                    <img class="block mx-auto w-6" src="./assets/money1.png" alt="Logo">
+                    <p class="text-sm text-[#080808B2] mt-2">Transactions</p>
+                </div>
+            </div>
+        </div>
+        <!-- Add money -->
+        <div class="">
+            <h3 class="text-lg font-semibold my-4">Add Money</h3>
+            <div class="bg-white p-6 rounded-3xl">
+                <form class="space-y-6">
+                    <div class="">
+                        <label class="font-medium">Select A Bank</label>
+                        <select id="bank"
+                            class="bg-[#F4F5F7] block w-full mt-2 px-5 py-4 outline-0 rounded-3xl border-none">
+                            <option>Select back</option>
+                            <option>City Bank</option>
+                            <option>Brac Bank</option>
+                            <option>Ific Bank</option>
+                            <option>UCB Bank</option>
+                        </select>
+
+                    </div>
+                    <div>
+                        <label class="font-medium">Bank Account Number</label>
+                        <input id="account" class="bg-[#F4F5F7] block w-full mt-2 px-5 py-4 outline-0 rounded-3xl border-none"
+                            type="text" placeholder="Enter 11 digit account number">
+                    </div>
+                    <div>
+                        <label class="font-medium">Amount to Add</label>
+                        <input id="ammount"
+                            class="bg-[#F4F5F7] block w-full mt-2 px-5 py-4 outline-0 rounded-3xl border-none"
+                            type="text" placeholder="Add Amount to withdraw">
+                    </div>
+                    <div>
+                        <label class="font-medium">Pin Number</label>
+                        <input id="pin" class="bg-[#F4F5F7] block w-full mt-2 px-5 py-4 outline-0 rounded-3xl border-none"
+                            type="text" placeholder="Enter 4 Digit Pin">
+                    </div>
+                    <button id="add-money-btn"
+                        class="bg-[#0874F2] block w-full px-5 py-[14px] rounded-3xl cursor-pointer text-xl font-semibold text-white duration-300 hover:scale-105">Add Money</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- JS Connenct -->
+    <script src="./home.js"></script>
+</body>
+
+</html>
