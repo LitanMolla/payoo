@@ -317,6 +317,8 @@ trxCard.addEventListener('click', function () {
 
 // dom
 
-
-
-console.log(allTrx);
+// log out function
+document.getElementById('logout').addEventListener('click',function () {
+    console.log('log out clicked')
+    window.location.href='/index.html'
+})
